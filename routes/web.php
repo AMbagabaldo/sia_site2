@@ -16,7 +16,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-$router->get('/aleya',['uses' => 'UserController@all']); //get all users
+//$router->get('/aleya',['uses' => 'UserController@all']); //get all users
 
 $router->get('/users','UserController@index'); //get all users
 
