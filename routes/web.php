@@ -18,6 +18,8 @@ $router->get('/', function () use ($router) {
 });
 $router->get('/aleya',['uses' => 'UserController@all']); //get all users
 
+$router->get('/users','UserController@index'); //get all users
+
 $router->get('/guser/{id}', 'UserController@show'); // get user by id
 
 $router->post('/auser', 'UserController@add'); // create new user record
