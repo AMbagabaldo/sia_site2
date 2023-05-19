@@ -36,7 +36,8 @@ class UserController extends Controller
 // GET (ID)
 public function show($id)
 { 
-    return User::where('id', 'like', '%'.$id.'%')->get();
+    $user = User::findOrFail($id);
+    return $this->successResponse($user);
 
 }
 
